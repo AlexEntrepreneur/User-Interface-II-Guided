@@ -5,14 +5,8 @@
 }
 /* General Styles */
 html {
-  box-sizing: border-box;
   font-family: 'Roboto';
 }
-
-*, *:before, *:after {
-  box-sizing: inherit;
-}
-
 
 h1, h2, h3, h4, h5 {
   font-size: 20px;
@@ -24,13 +18,8 @@ p {
 }
 
 .container {
-  width: 500px;
+  width: 600px;
   margin: 0 auto;
-}
-
-strong {
-  font-weight: bold;
-  color: red;
 }
 
 header {
@@ -39,12 +28,53 @@ header {
   padding: 20px 0;
 }
 
+/*  Student Facing Notes
+
+Display: none
+- Removes the element from the flow of the page
+- Very useful for JavaScript interactions later
+
+Display: block
+
+- Takes up the horizontal space if it can
+- Introduces a page break
+- Respects the box model completely
+
+Display: inline
+
+- Takes up the horizontal space of it's content only
+- Content flows around them nicely
+- Respects the horzontal aspects of box model but not the vertical aspects (left and right margins but not top or bottom)
+
+Display: inline-block
+
+- Takes up the horizontal space of it's content only
+- Content flows around them nicely
+- Respects the box model completely
+- no page break
+
+*/
+
+strong {
+  font-size: 25px;
+  font-weight: bold;
+  color: royalblue;
+  border: 2px solid royalblue;
+  /* margin: 10px; */
+  display: inline;
+}
+
+
+
 header h1 {
-  font-size: 23px;
+  font-size: 20px;
+  display: inline-block;
 }
 
 header nav {
   margin: 20px 0;
+  display: inline-block;
+  margin-left: 62px;
 }
 
 header nav a {
@@ -57,18 +87,70 @@ header nav .first-anchor {
 }
 
 .main-content section {
-  margin: 20px 0;
+  margin: 0 10px;
+  width: calc(50% - 40px);
+  display: inline-block;
+  vertical-align: top;
+}
+
+.button {
+  display: inline-block;
+  padding: 8px;
+  margin-bottom: 30px;
+  background-color: royalblue;
+  min-width: 120px;
+  text-decoration: none;
+  text-align: center;
+  color: white;
+  font-size: 14px;
 }
 
 .main-footer {
   margin-bottom: 40px;
 }
 
+.main-footer nav a {
+  margin-left: 20px;
+}
 
-/* .box {
-  background-color: aqua;
-  width: 400px;
-  padding: 75px;
-  border: 15px solid salmon;
-  margin: 75px;
-} */
+.box {
+  /* Student facing notes
+  
+  Box Model: Content 
+  - First look at the actual content as a guide
+  - width and height provide constraints
+  - overflow occurs if width and height are not enough for the content provided
+  */
+  width: 220px;
+  height: 200px;
+  background: #d2d2d2;
+  
+  /* Box Model: Padding 
+  - White space between content and border
+  Shorthand - "You will be in TRBL if you don't remember these!"
+  - TRBL
+  - TB LR
+  - T LR B
+  - T R B L
+  - Individual sides work too
+  
+  */
+  padding: 20px;
+  /* padding: 20px 30px; */
+  /* padding: 10px 20px 10px; */
+  /* padding: 10px 20px 30px 10px; */
+  /* padding-top: 40px;  */
+ 
+  
+  /* Border
+  shorthand for border: size, type, color;
+  */
+  
+  border: 10px solid royalblue;
+  /* Margin
+  - The white space around the border and other elements on the page
+  - Has same shortand has padding TRBL
+  */
+  /* margin: 100px; */
+  margin: 0 auto;
+}

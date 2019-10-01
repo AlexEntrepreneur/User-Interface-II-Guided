@@ -1,8 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans|Roboto');
 
-* {
-  box-sizing: border-box;
-}
 /* General Styles */
 html {
   font-family: 'Roboto';
@@ -28,7 +25,7 @@ header {
   padding: 20px 0;
 }
 
-/*  Student Facing Notes
+/*  NOTES
 
 Display: none
 - Removes the element from the flow of the page
@@ -56,24 +53,16 @@ Display: inline-block
 */
 
 strong {
-  font-size: 25px;
   font-weight: bold;
   color: royalblue;
-  border: 2px solid royalblue;
-  /* margin: 10px; */
-  display: inline;
 }
-
-
 
 header h1 {
   font-size: 20px;
-  display: inline-block;
 }
 
 header nav {
   margin: 20px 0;
-  display: inline-block;
   margin-left: 62px;
 }
 
@@ -86,24 +75,9 @@ header nav .first-anchor {
   margin-left: 0;
 }
 
-.main-content section {
-  margin: 0 10px;
-  width: calc(50% - 40px);
-  display: inline-block;
-  vertical-align: top;
-}
+/* .main-content section {
 
-.button {
-  display: inline-block;
-  padding: 8px;
-  margin-bottom: 30px;
-  background-color: royalblue;
-  min-width: 120px;
-  text-decoration: none;
-  text-align: center;
-  color: white;
-  font-size: 14px;
-}
+} */
 
 .main-footer {
   margin-bottom: 40px;
@@ -114,15 +88,13 @@ header nav .first-anchor {
 }
 
 .box {
-  /* Student facing notes
+  /* NOTES
   
   Box Model: Content 
   - First look at the actual content as a guide
   - width and height provide constraints
   - overflow occurs if width and height are not enough for the content provided
   */
-  width: 220px;
-  height: 200px;
   background: #d2d2d2;
   
   /* Box Model: Padding 
@@ -133,24 +105,14 @@ header nav .first-anchor {
   - T LR B
   - T R B L
   - Individual sides work too
-  
   */
-  padding: 20px;
-  /* padding: 20px 30px; */
-  /* padding: 10px 20px 10px; */
-  /* padding: 10px 20px 30px 10px; */
-  /* padding-top: 40px;  */
  
-  
   /* Border
   shorthand for border: size, type, color;
   */
   
-  border: 10px solid royalblue;
   /* Margin
   - The white space around the border and other elements on the page
   - Has same shortand has padding TRBL
   */
-  /* margin: 100px; */
-  margin: 0 auto;
 }

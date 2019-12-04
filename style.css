@@ -1,6 +1,11 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans|Roboto');
 
 /* General Styles */
+
+* {
+  box-sizing: border-box;
+}
+
 html {
   font-family: 'Roboto';
 }
@@ -52,6 +57,11 @@ Display: inline-block
 
 */
 
+img {
+  display: inline-block;
+  width: 100%;
+}
+
 strong {
   font-weight: bold;
   color: royalblue;
@@ -59,11 +69,13 @@ strong {
 
 header h1 {
   font-size: 20px;
+  display: inline-block;
 }
 
 header nav {
   margin: 20px 0;
   margin-left: 62px;
+  display: inline-block;
 }
 
 header nav a {
@@ -75,9 +87,11 @@ header nav .first-anchor {
   margin-left: 0;
 }
 
-/* .main-content section {
-
-} */
+.main-content section {
+  display: inline-block;
+  vertical-align: top;
+  width: calc(50% - 10px);
+}
 
 .main-footer {
   margin-bottom: 40px;
@@ -88,6 +102,13 @@ header nav .first-anchor {
 }
 
 .box {
+  display: inline-block;
+  /* visibility: hidden; */
+  /* opacity: 0; */
+  /* display: none; */
+
+  width: 220px;
+  height: 200px;
   /* NOTES
   
   Box Model: Content 
@@ -106,13 +127,31 @@ header nav .first-anchor {
   - T R B L
   - Individual sides work too
   */
+  padding: 20px;
+  padding: 20px 30px 40px;
+  /* padding: 30px 40px; */
+  /* padding: 10px 20px 30px 40px; */
  
   /* Border
   shorthand for border: size, type, color;
   */
+
+  /* border: 6px solid royalblue; */
+  /* border: 6px dashed royalblue; */
+  border: 6px dotted royalblue;
+
   
   /* Margin
   - The white space around the border and other elements on the page
   - Has same shortand has padding TRBL
   */
+  margin: 50px;
+  margin: 100px 200px;
+  margin: 20px auto;
 }
+
+.box-container {
+  width: 600px;
+  margin: 0 auto;
+}
+
